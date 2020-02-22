@@ -8,13 +8,19 @@
   "private": false,
   "scripts": {
     "build": "webpack",
-    "dev": "webpack-dev-server"
+    "dev": "webpack-dev-server",
+    "lint": "yarn eslint . --ext .ts",
+    "lint-fix": "yarn lint --fix",
+    "prettier-check": "prettier --check --config ../.prettierrc './**/*.{js,ts,tsx,jsx}'"
   },
   "dependencies": {
     "phaser": "^3.20.1"
   },
   "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^2.20.0",
+    "@typescript-eslint/parser": "^2.20.0",
     "copy-webpack-plugin": "^4.6.0",
+    "eslint": "^6.8.0",
     "ts-loader": "^5.3.3",
     "tslint": "^5.12.1",
     "typescript": "^3.7.2",
